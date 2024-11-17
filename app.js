@@ -158,3 +158,65 @@ console.log("Exercise 8 restult: ", basicCalculator(10, 3, "divide"));
 console.log("Exercise 8 restult: ", basicCalculator(65, 0, "divide"));
 console.log("Exercise 8 restult: ", basicCalculator(0, 41, "divide"));
 console.log("Exercise 8 restult: ", basicCalculator(10, 3, "hello"));
+
+console.log("-----------------------------------------------------");
+console.log("--------------------- LEVEL UP ----------------------");
+console.log("-----------------------------------------------------");
+
+// Exercise 10: Calculate Grade from input value
+function calculateGrade(score) {
+  if (score >= 90 && score <= 100) {
+    return `Grade is A (${score}%)`;
+  } else if (score >= 80 && score < 90) {
+    return `Grade is B (${score}%)`;
+  } else if (score >= 70 && score < 80) {
+    return `Grade is C (${score}%)`;
+  } else if (score >= 60 && score < 70) {
+    return `Grade is D (${score}%)`;
+  } else if (score < 60 && score >= 0) {
+    return `Grade is F (${score}%)`;
+  } else {
+    return `ERROR: Invalid score (${score}%)`;
+  }
+}
+
+console.log("Exercise 10 result: ", calculateGrade(65));
+console.log("Exercise 10 result: ", calculateGrade(37));
+console.log("Exercise 10 result: ", calculateGrade(93));
+console.log("Exercise 10 result: ", calculateGrade(71));
+console.log("Exercise 10 result: ", calculateGrade(88));
+console.log("Exercise 10 result: ", calculateGrade(104));
+
+console.log("-----------------------------------------------------");
+
+// Exercise 11: Create user name from the input of first name and last name
+function createUsername(firstName, lastName) {
+  if (firstName && lastName) {
+    let username =
+      firstName.slice(0, 3) +
+      lastName.slice(0, 3) +
+      (firstName + lastName).length;
+
+    return username;
+  } else {
+    return "ERROR: Invalid input";
+  }
+}
+
+console.log("Username: ", createUsername("Ahmed", "Abdulwahab"));
+console.log(createUsername("Ahmed", ""));
+
+console.log("-----------------------------------------------------");
+
+// Exercise 12: Return the number of arguments passed to the function
+function numArg() {
+  return arguments.length;
+}
+
+console.log("Number of arguments passed is: ", numArg(1, 2, 3, 4, 5, 6, 7));
+console.log(
+  "Number of arguments passed is: ",
+  numArg(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+);
+console.log("Number of arguments passed is: ", numArg());
+console.log("Number of arguments passed is: ", numArg(1));
